@@ -9,11 +9,11 @@ directivoRouter.route('/')
 .all((req,res,next) => {
     console.log("Aglo esta pasando");
     res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
+    res.setHeader('Content-Type', 'text/plain'); 
     next();
-})
+}) 
 .get((req,res,next) => {
-    res.end('Este metodo retornara la lista de directivos');
+    res.end('Este metodo retornara la lista de directivos'); 
 })
 .post((req, res, next) => {
     res.end('Se agregare el directivo ' + req.body.nombre + ' con identificacón : ' + req.body.numero_documento);
