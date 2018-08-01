@@ -6,6 +6,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var acudienteRouter = require('./routes/acudiente');
+
 var estudianteRouter=require('./routes/estudianteRouter');
 var mongoose=require('mongoose');
 var config=require('./config');
@@ -27,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/acudiente', acudienteRouter);
 app.use('/asdfs',estudianteRouter)
 
 // catch 404 and forward to error handler
