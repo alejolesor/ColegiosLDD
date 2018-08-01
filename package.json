@@ -1,0 +1,23 @@
+{
+  "name": "colegiosldd",
+  "version": "1.0.0",
+  "description": "Repositorio proyecto principal Fedesoft \r Lero lero",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejolesor/ColegiosLDD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejolesor/ColegiosLDD/issues"
+  },
+  "homepage": "https://github.com/alejolesor/ColegiosLDD#readme",
+  "dependencies": {
+    "pkg": "^4.3.3"
+  },
+  "devDependencies": {}
+}
