@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+var authenticate = require('../authenticate');
 
 const estudianteRouter = express.Router();
 
@@ -12,17 +13,17 @@ estudianteRouter.route('/')
     res.setHeader('Content-Type', 'text/plain');
     next();
 })
-.get((req,res,next) => {
+.get(authenticate.verifyUser,(req,res,next) => {
     res.end('Este metodo retornara la lista de estudiantes');
 })
-.post((req, res, next) => {
+.post(authenticate.verifyUser,(req, res, next) => {
     res.end('Se agregare el estudiante ' + req.body.name + ' que vive en : ' + req.body.address);
 })
-.put((req, res, next) => {
+.put(authenticate.verifyUser,(req, res, next) => {
     res.statusCode = 403;
     res.end('el metodo PUT no es soportado en  /estudiantes');
 })
-.delete((req, res, next) => {
+.delete(authenticate.verifyUser,(req, res, next) => {
     res.end('Eliminando todos los estudiantes');
 });
 
