@@ -15,7 +15,8 @@ var usuario=new Esquema({
     admin:{
         type: Boolean,
         default: false,
-    }
+    },
+    facebookId: String
 });
 usuario.plugin(passportLocalMongoose);
 module.exports=mongoose.model('usuario',usuario);
