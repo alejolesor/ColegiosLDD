@@ -13,7 +13,7 @@ var esquemaacudiente= new Esquema({
     },
     edad:{
         type:Number,
-        required
+        required:true
     }
 });
 
