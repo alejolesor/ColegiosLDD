@@ -6,13 +6,15 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var acudienteRouter = require('./routes/acudiente');
 
 var estudianteRouter=require('./routes/estudianteRouter');
+var directivoRouter = require('./routes/directivoRouter');
 var mongoose=require('mongoose');
 var config=require('./config');
-var db=mongoose.connect('mongodb://localhost:27017/claseServidor');
+var db=mongoose.connect('mongodb://localhost:27017/claseServidorLdd');
 var passport = require('passport');
+var authenticate = require('./authenticate');
+
 mongoose.connection.on('error',()=>{console.log("Base de datos en problemas")})
 mongoose.connection.once('open',()=>{console.log("Se ha conectado correctamente")})
 
@@ -33,8 +35,10 @@ app.use(passport.session());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/acudiente', acudienteRouter);
-app.use('/asdfs',estudianteRouter)
+
+app.use('/asdfs',estudianteRouter);
+app.use('/directivo',directivoRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

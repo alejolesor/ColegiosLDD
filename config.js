@@ -1,8 +1,9 @@
 module.exports={
-    'secretKey':'2652656855656',
+
+    'secretKey': '123456789-987654321',
     'mongoUrl' : 'mongodb://localhost:27017/claseServidor',
     'facebook' : {
-        clientId: '501942000252546',
-        clientSecret: '612f1636650b5f12ae17f3db027a1b59'
+        clientId: '442501879581632',
+        clientSecret: '9cd90f3fa984e954b4f85ce8b46198a7'
     }
 }

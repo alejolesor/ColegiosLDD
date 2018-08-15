@@ -21,16 +21,24 @@ var commentSchema = new Esquema({
     timestamps: true
 });
 
-var esquemaEstudiante= new Esquema({
+var esquemaDirectivo= new Esquema({
+    tipo_doc:{
+        type:String,
+        required:true
+    },
+    numero_documento:{
+        type:Number,
+        required:true
+    },
     nombre:{
         type:String,
         required:true
     },
-    apellido:{
-        type:String,
+    celular:{
+        type:Number,
         required:true
-    },
+    }, 
     comentarios:[commentSchema]
 });
 
-module.exports= mongoose.model('Estudiante',esquemaEstudiante);
+module.exports= mongoose.model('Directivo',esquemaDirectivo);

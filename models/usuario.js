@@ -1,5 +1,5 @@
 var mongoose=require('mongoose');
-var passportLocalMogoose = require('passport-local-mongoose');
+var passportLocalMongoose = require('passport-local-mongoose');
 var Esquema=mongoose.Schema;
 var usuario=new Esquema({
     username:{
@@ -14,9 +14,10 @@ var usuario=new Esquema({
     },
     admin:{
         type: Boolean,
-        default: false
+        default: false,
     },
     facebookId: String
 });
-usuario.plugin(passportLocalMogoose);
+usuario.plugin(passportLocalMongoose);
+
 module.exports=mongoose.model('usuario',usuario);

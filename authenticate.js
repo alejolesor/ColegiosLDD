@@ -1,3 +1,4 @@
+
 //comentario
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
@@ -42,6 +43,8 @@ exports.facebookPassport = passport.use(new FacebookTokenStrategy({
     clientID: config.facebook.clientId,
     clientSecret: config.facebook.clientSecret
 }, (accessToken, refreshToken, profile, done) => {
+
+    console.log(profile);
     User.findOne({facebookId: profile.id}, (err, user) => {
         if (err) {
             return done(err, false);
