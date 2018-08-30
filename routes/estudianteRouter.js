@@ -8,7 +8,6 @@ const estudianteRouter = express.Router();
 estudianteRouter.use(bodyParser.json());
 
 estudianteRouter.route('/')
-
     .get((req, res, next) => {
         Estudiante.find({})
             .then((estudiantes) => {
@@ -109,8 +108,5 @@ estudianteRouter.route('/:estudianteId/comments/:commentId')
             }, (err) => next(err))
             .catch((err) => next(err));
     })
-
-
-
 
 module.exports = estudianteRouter;

@@ -1,4 +1,5 @@
 module.exports={
+
     'secretKey': '123456789-987654321',
     'mongoUrl' : process.env.MONGO_DEV || process.env.MONGO_MASTER|| 'mongodb://localhost:27017/claseServidor',
     'facebook' : {

@@ -1,6 +1,7 @@
 
 var mongoose= require('mongoose');
 var Esquema=mongoose.Schema;
+
 var commentSchema = new Esquema({
     rating:  {
         type: Number,
@@ -19,6 +20,7 @@ var commentSchema = new Esquema({
 }, {
     timestamps: true
 });
+
 var esquemaEstudiante= new Esquema({
     nombre:{
         type:String,

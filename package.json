@@ -1,23 +1,25 @@
 {
-  "name": "colegiosldd",
-  "version": "1.0.0",
-  "description": "Repositorio proyecto principal Fedesoft \r Lero lero",
-  "main": "index.js",
+  "name": "servidorcolegiosldd",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www",
+    "start:n": "nodemon ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alejolesor/ColegiosLDD.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alejolesor/ColegiosLDD/issues"
-  },
-  "homepage": "https://github.com/alejolesor/ColegiosLDD#readme",
   "dependencies": {
-    "pkg": "^4.3.3"
-  },
-  "devDependencies": {}
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.5",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.18.3",
+    "passport": "^0.4.0",
+    "passport-facebook-token": "^3.3.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1"
+  }
 }
